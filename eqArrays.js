@@ -8,11 +8,11 @@ const assertEqual = function(actual, expected) {
 
 let eqArrays = function(list1,list2) {
   for (let i = 0; i < list1.length; i++) {
-    if (list1[i] === list2[i]) {
-      return true;
+    if (list1[i] !== list2[i]) {
+      return false;
     }
   }
-  return false;
+  return true;
 };
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => true
