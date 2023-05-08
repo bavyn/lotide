@@ -1,17 +1,5 @@
-// assertEqual function implementation
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertation Passed: ${actual}  === ${expected}`);
-  } else
-    console.log(`❌ Assertation Failed: ${actual}  !== ${expected}`);
-};
-
-// tail function implementation
-let tail = function(myArray) {
-  return myArray.slice(1);
-};
-
-module.exports = tail;
+const assertEqual = require('../assertEqual');
+const tail = require('../tail');
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 assertEqual(result.length, 2); // ensure we get back two elements
