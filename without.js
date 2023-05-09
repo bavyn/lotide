@@ -1,23 +1,5 @@
-// eqArrays function from previous exercise
-let eqArrays = function(list1,list2) {
-  for (let i = 0; i < list1.length; i++) {
-    if (list1[i] !== list2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
-// assertArraysEqual from previous exercise
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(`✅ Assertation Passed: ${array1}  === ${array2}`);
-  } else {
-    console.log(`❌ Assertation Failed: ${array1}  !== ${array2}`);
-  }
-};
-
-// without function implementation
 const without = function(source, itemsToRemove) {
   const itemsToKeep = [];
   for(const items of source) {
@@ -28,8 +10,7 @@ const without = function(source, itemsToRemove) {
   return itemsToKeep;
 };
 
-
-
+module.exports = without;
 
 // test
 let result = without([1, 2, 3], [1]) // => [2, 3]

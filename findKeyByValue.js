@@ -1,17 +1,11 @@
-// assertEqual from previous exercise
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertation Passed: ${actual}  === ${expected}`);
-  } else
-    console.log(`❌ Assertation Failed: ${actual}  !== ${expected}`);
-};
-
-// findKeyByValue function implementation
+const assertEqual = require('./assertEqual');
 
 const findKeyByValue = function(obj, value) {
   const entries = Object.entries(obj);
   return entries.find(entry => entry[1] === value)?.[0];
 };
+
+module.exports = findKeyByValue;
 
 // test
 

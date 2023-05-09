@@ -1,24 +1,4 @@
-// eqArrays function from previous exercise
-let eqArrays = function(list1,list2) {
-  for (let i = 0; i < list1.length; i++) {
-    if (list1[i] !== list2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-// assertArraysEqual function from previous exercise
-
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(`✅ Assertation Passed: ${array1}  === ${array2}`);
-  } else {
-    console.log(`❌ Assertation Failed: ${array1}  !== ${array2}`);
-  }
-};
-
-// takeUntil function implementation
+const assertArraysEqual = require('./assertArraysEqual');
 
 const takeUntil = function(array, callback) {
   let taken = [];
@@ -31,6 +11,8 @@ const takeUntil = function(array, callback) {
   }
   return taken;
 };
+
+module.exports = takeUntil;
 
 // test
 
