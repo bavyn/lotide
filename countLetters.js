@@ -3,7 +3,7 @@ const assertEqual = require('./assertEqual');
 const countLetters = function(sentence) {
   const counter = {};
 
-  for (let letter of sentence) {
+  for (let letter in sentence) {
     if (letter !== ' ') {
       if (counter[letter]) {
       counter[letter] += 1;
@@ -17,7 +17,7 @@ const countLetters = function(sentence) {
 
 module.exports = countLetters;
 
-/*
+
 //test
 let result = countLetters('please work');
 console.log(result);
@@ -25,4 +25,3 @@ assertEqual(countLetters(result));
 
 result = countLetters('lhl');
 console.log(result);
-*/
