@@ -17,13 +17,12 @@ const countLetters = function(sentence) {
 
 module.exports = countLetters;
 
+/*
 //test
 let result = countLetters('please work');
 console.log(result);
 assertEqual(countLetters(result));
 
-result = countLetters('my dog charlie ate a lip balm today');
-console.log(result);
-
 result = countLetters('lhl');
 console.log(result);
+*/
